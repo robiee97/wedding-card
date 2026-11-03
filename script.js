@@ -4,7 +4,7 @@
 
 // Paste your Google Apps Script Web App URL here to capture RSVPs directly to Google Sheets:
 // (e.g. 'https://script.google.com/macros/s/AKfycb.../exec')
-const GOOGLE_SHEET_URL = '';
+const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbwdOMVh5M63s6fXTMu0VZHfJlaZMhblHwxi2s_fC3HMDVhiwteefp4oXNQngsrUP5ZnYg/exec';
 
 document.addEventListener('DOMContentLoaded', () => {
   // --- 1. Audio Element & Music Controller ---
