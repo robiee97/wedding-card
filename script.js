@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- 2. Welcome Envelope Opening Flow ---
   const welcomeScreen = document.getElementById('welcome-screen');
   const openBtn = document.getElementById('open-invite-btn');
-  const envelopeSeal = document.getElementById('envelope-seal');
 
   function openEnvelope() {
     if (!welcomeScreen || welcomeScreen.classList.contains('opened')) return;
@@ -58,17 +57,19 @@ document.addEventListener('DOMContentLoaded', () => {
       welcomeScreen.classList.add('opened');
       // Scroll to top of main invitation smoothly
       window.scrollTo({ top: 0, behavior: 'smooth' });
+      triggerAutoScrollAfterOpen();
     }, 750);
   }
 
+  // Open strictly from the bottom Open button
   if (openBtn) openBtn.addEventListener('click', openEnvelope);
-  if (envelopeSeal) envelopeSeal.addEventListener('click', openEnvelope);
 
   // Check URL params for ?open=1
   const urlParams = new URLSearchParams(window.location.search);
   if (urlParams.get('open') === '1') {
     if (welcomeScreen) {
       welcomeScreen.classList.add('opened');
+      triggerAutoScrollAfterOpen();
     }
   }
 
@@ -308,5 +309,96 @@ END:VCALENDAR`;
     }
 
     renderParticles();
+  }
+
+  // --- 7. Smooth Auto-Scroll Engine ---
+  let isAutoScrolling = false;
+  let autoScrollRaf = null;
+  const scrollSpeed = 0.85; // Slow, comfortable reading speed
+  let autoScrollStartedOnce = false;
+
+  const autoScrollBtn = document.getElementById('auto-scroll-toggle-btn');
+
+  function updateAutoScrollButtonUI() {
+    if (!autoScrollBtn) return;
+    if (isAutoScrolling) {
+      autoScrollBtn.classList.add('scrolling');
+      autoScrollBtn.innerHTML = '<span class="scroll-btn-icon">⏸</span><span class="scroll-btn-text">Pause Auto-Scroll</span>';
+      autoScrollBtn.setAttribute('title', 'Auto-scrolling is active. Click anywhere or tap here to pause.');
+    } else {
+      autoScrollBtn.classList.remove('scrolling');
+      autoScrollBtn.innerHTML = '<span class="scroll-btn-icon">▶</span><span class="scroll-btn-text">Resume Auto-Scroll</span>';
+      autoScrollBtn.setAttribute('title', 'Auto-scrolling is paused. Click anywhere or tap here to resume.');
+    }
+  }
+
+  function autoScrollStep() {
+    if (!isAutoScrolling) return;
+
+    // Check if reached near bottom of page
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    if (window.scrollY >= maxScroll - 4) {
+      stopAutoScroll();
+      return;
+    }
+
+    window.scrollBy({ top: scrollSpeed, left: 0, behavior: 'auto' });
+    autoScrollRaf = requestAnimationFrame(autoScrollStep);
+  }
+
+  function startAutoScroll() {
+    if (isAutoScrolling) return;
+    isAutoScrolling = true;
+    updateAutoScrollButtonUI();
+    if (autoScrollBtn) autoScrollBtn.classList.add('visible');
+    autoScrollRaf = requestAnimationFrame(autoScrollStep);
+  }
+
+  function stopAutoScroll() {
+    if (!isAutoScrolling) return;
+    isAutoScrolling = false;
+    updateAutoScrollButtonUI();
+    if (autoScrollRaf) {
+      cancelAnimationFrame(autoScrollRaf);
+      autoScrollRaf = null;
+    }
+  }
+
+  function toggleAutoScroll() {
+    if (isAutoScrolling) {
+      stopAutoScroll();
+    } else {
+      startAutoScroll();
+    }
+  }
+
+  if (autoScrollBtn) {
+    autoScrollBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleAutoScroll();
+    });
+  }
+
+  // Click anywhere on page toggles auto-scroll (stops if scrolling, resumes if stopped)
+  document.addEventListener('click', (e) => {
+    // Only active after welcome envelope has opened
+    if (welcomeScreen && !welcomeScreen.classList.contains('opened')) return;
+
+    // Ignore clicks on interactive buttons, links, form inputs, modal dialogs, or music toggle
+    if (e.target.closest('button, a, input, select, textarea, .rsvp-modal, #music-toggle-btn, #auto-scroll-toggle-btn, .hero-polaroid-frame')) {
+      return;
+    }
+
+    if (autoScrollStartedOnce) {
+      toggleAutoScroll();
+    }
+  });
+
+  // Start auto-scroll after opening envelope
+  function triggerAutoScrollAfterOpen() {
+    setTimeout(() => {
+      autoScrollStartedOnce = true;
+      startAutoScroll();
+    }, 1800); // 1.8s delay so guest can take in the hero envelope and couple names first
   }
 });
