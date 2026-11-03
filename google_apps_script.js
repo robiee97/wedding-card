@@ -45,8 +45,8 @@ function doPost(e) {
  *    - Who has access: "Anyone"  <-- IMPORTANT!
  * 9. Click 'Deploy', authorize permissions if prompted.
  * 10. Copy the "Web app URL" (starts with https://script.google.com/macros/s/...)
- * 11. Add it to Cloudflare Pages:
- *     Go to Cloudflare Dashboard -> Workers & Pages -> wedding-card -> Settings -> Environment variables -> Add variable:
- *     Variable name: GOOGLE_SHEET_WEBAPP_URL
- *     Value: <your copied Web app URL>
+ * 11. Paste that URL into script.js:
+ *     const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/.../exec';
+ * 12. Commit and push to GitHub:
+ *     git commit -am "Connect Google Sheet RSVP" && git push
  */

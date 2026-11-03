@@ -2,6 +2,10 @@
  * Robin & Anjali Wedding Invitation - Interactive Engine
  */
 
+// Paste your Google Apps Script Web App URL here to capture RSVPs directly to Google Sheets:
+// (e.g. 'https://script.google.com/macros/s/AKfycb.../exec')
+const GOOGLE_SHEET_URL = '';
+
 document.addEventListener('DOMContentLoaded', () => {
   // --- 1. Audio Element & Music Controller ---
   const bgMusic = document.getElementById('bg-music');
@@ -196,15 +200,18 @@ END:VCALENDAR`;
         submitBtn.innerText = 'Submitting...';
       }
 
-      // Send to Cloudflare Pages API -> Google Sheet
-      try {
-        await fetch('/api/rsvp', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(rsvpData)
-        });
-      } catch (networkErr) {
-        console.warn('Network submission error (will rely on backup):', networkErr);
+      // Send directly to Google Sheet if configured
+      if (typeof GOOGLE_SHEET_URL === 'string' && GOOGLE_SHEET_URL.trim().length > 0) {
+        try {
+          await fetch(GOOGLE_SHEET_URL.trim(), {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(rsvpData)
+          });
+        } catch (networkErr) {
+          console.warn('Google Sheet submission warning (saved to local backup):', networkErr);
+        }
       }
 
       // Reset button & transition to thank you confirmation
