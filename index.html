@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Anjali & Robin | Wedding Celebration</title>
+  
+  <!-- SEO & Open Graph Meta Tags for WhatsApp, iMessage, Social Sharing -->
+  <meta name="description" content="We joyfully invite you to the wedding celebration of Anjali & Robin on Wednesday, November 25, 2026 at Midori by Tivoli, Kapashera, New Delhi.">
+  <meta property="og:title" content="Anjali & Robin | Wedding Invitation">
+  <meta property="og:description" content="Join us in celebrating the wedding of Anjali & Robin | November 25, 2026 | Midori by Tivoli Kapashera">
+  <meta property="og:image" content="assets/images/hero-photo.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Anjali & Robin | Wedding Invitation">
+  <meta name="twitter:description" content="Join us in celebrating the wedding of Anjali & Robin | November 25, 2026">
+  <meta name="twitter:image" content="assets/images/hero-photo.jpg">
+  <meta name="theme-color" content="#511419">
+
+  <!-- Google Fonts: Cormorant Garamond, Cinzel, The Nautigal, Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=The+Nautigal:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Audio Player -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="assets/music/wedding-song.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Ambient Texture & Particles Canvas -->
+  <div class="page-texture-overlay"></div>
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ==========================================================================
+       WELCOME SCREEN / CLICK TO OPEN ENVELOPE MODAL
+       ========================================================================== -->
+  <div id="welcome-screen" class="welcome-screen">
+    <div class="envelope-card">
+      <!-- Decorative floral bouquets -->
+      <img src="assets/images/flower2-decoration.webp" alt="Floral Decoration" class="envelope-flower envelope-flower-left">
+      <img src="assets/images/flower2-decoration.webp" alt="Floral Decoration" class="envelope-flower envelope-flower-right">
+
+      <!-- Wax seal badge -->
+      <div class="wax-seal-container">
+        <div id="envelope-seal" class="envelope-seal" title="Click to open">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+        <div class="seal-ripple"></div>
+      </div>
+
+      <!-- Couple Names -->
+      <h1 class="envelope-names">
+        Anjali
+        <span class="amp">&</span>
+        Robin
+      </h1>
+
+      <!-- Elegant Divider Ornament -->
+      <div class="ornament-divider">
+        <svg width="24" height="12" viewBox="0 0 24 12" fill="currentColor">
+          <path d="M12 2C9.5 2 8.5 5 6 5C3.5 5 2 3.5 0 3.5C0 5 1.5 7 4 7C7 7 8 4 12 4C16 4 17 7 20 7C22.5 7 24 5 24 3.5C22 3.5 20.5 5 18 5C15.5 5 14.5 2 12 2Z"/>
+        </svg>
+      </div>
+
+      <div class="envelope-date">November 25, 2026</div>
+      <div class="envelope-invites">Cordially Invites</div>
+
+      <!-- Open Button -->
+      <button id="open-invite-btn" class="btn-open-invite" type="button">
+        <span>Open</span>
+      </button>
+
+      <div class="tap-hint">Tap to open invitation</div>
+    </div>
+  </div>
+
+  <!-- Background Castle Architectural Watermark -->
+  <img src="assets/images/castle-background.webp" alt="Castle Architecture" class="castle-watermark">
+
+  <!-- ==========================================================================
+       MAIN INVITATION CONTAINER
+       ========================================================================== -->
+  <main class="main-invitation">
+
+    <!-- 1. Top Hero Section: Envelope + Polaroid Slide-out -->
+    <section class="hero-envelope-section">
+      <div class="hero-envelope-wrapper">
+        <!-- Open Velvet Burgundy Envelope -->
+        <img src="assets/images/envelope-background.webp" alt="Wedding Envelope" class="hero-envelope-bg">
+        
+        <!-- Rose Floral Garland -->
+        <img src="assets/images/flower2-decoration.webp" alt="Floral Decoration" class="hero-envelope-flower">
+
+        <!-- Polaroid Photo -->
+        <div class="hero-polaroid-frame" title="Anjali &amp; Robin">
+          <img src="assets/images/hero-photo.jpg" alt="Robin &amp; Anjali" class="hero-polaroid-img">
+        </div>
+
+        <!-- Wax Seal on Envelope Flap -->
+        <div class="hero-wax-seal">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Couple Title & Happy Wedding -->
+      <div class="hero-titles-wrapper">
+        <h2 class="hero-couple-title">
+          Anjali
+          <span class="amp">&</span>
+          Robin
+        </h2>
+        <div class="hero-wedding-tag">Happy Wedding</div>
+      </div>
+    </section>
+
+    <!-- 2. Family Information Card -->
+    <section class="burgundy-card">
+      <div class="card-inner-frame">
+        <div class="family-info-header">
+          Engagement Ceremony, Mehndi &amp; Haldi, Wedding &amp; Family Dinner
+        </div>
+
+        <div class="family-columns">
+          <!-- Bride's Family -->
+          <div class="family-column">
+            <div class="family-side-title">Bride's Family</div>
+            <div class="family-parents">Lt. JWO Ashok Kumar &amp; Shila</div>
+            <div class="family-child">Anjali</div>
+            <div class="family-address">Gali 14 - Sadh Nagar, Palam Colony, New Delhi 110045</div>
+          </div>
+
+          <!-- Groom's Family -->
+          <div class="family-column">
+            <div class="family-side-title">Groom's Family</div>
+            <div class="family-parents">Adv. Rajesh Kumar &amp; Anita Kumari</div>
+            <div class="family-child">Robin</div>
+            <div class="family-address">Gali 1 - Sadh Nagar, Palam Colony, New Delhi 110045</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. Announcement Card -->
+    <section class="burgundy-card">
+      <div class="card-inner-frame">
+        <p class="announcement-text">
+          WE JOYFULLY ANNOUNCE<br>THE WEDDING CELEBRATIONS OF OUR CHILDREN
+        </p>
+        <div class="card-divider-line"></div>
+        <div class="announcement-couple">Anjali &amp; Robin</div>
+      </div>
+    </section>
+
+    <!-- 4. Ceremonies Section (Engagement, Mehndi, Haldi, Wedding) -->
+    <section class="burgundy-card ceremony-stacked-card">
+      <div class="card-inner-frame">
+        <h3 class="section-heading">Celebrations &amp; Ceremonies</h3>
+
+        <!-- Event 1: Engagement -->
+        <div class="ceremony-entry">
+          <h4 class="ceremony-entry-title">Engagement Ceremony</h4>
+          <div class="ceremony-entry-venue">at The Opulence Hotel &amp; Banquets</div>
+          <div class="ceremony-entry-address">
+            D4, Peera Garhi, Udyog Nagar, Mangolpuri, Delhi, 110041
+          </div>
+          <div class="ceremony-entry-meta">
+            <span>AT 11:00</span>
+            <span>SUNDAY</span>
+          </div>
+          <div class="ceremony-date-display">
+            <span class="ceremony-day-num">22</span>
+            <div class="ceremony-month-stack">
+              <span>NOVEMBER</span>
+              <span>2026</span>
+            </div>
+          </div>
+          <div class="ceremony-actions">
+            <a
+              href="https://www.google.com/maps?cid=16689876233647877183"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-directions">
+              📍 GET DIRECTIONS
+            </a>
+          </div>
+        </div>
+
+        <div class="ceremony-divider"></div>
+
+        <!-- Event 2: Mehndi -->
+        <div class="ceremony-entry">
+          <h4 class="ceremony-entry-title">Mehndi Function</h4>
+          <div class="ceremony-entry-venue">at Hotel Palazzo Inn</div>
+          <div class="ceremony-entry-address">
+            13-14, Service Lane, A-2, Pankha Rd, Block A2, Janakpuri, New Delhi, Delhi, 110058
+          </div>
+          <div class="ceremony-entry-meta">
+            <span>AT 18:00</span>
+            <span>MONDAY</span>
+          </div>
+          <div class="ceremony-date-display">
+            <span class="ceremony-day-num">23</span>
+            <div class="ceremony-month-stack">
+              <span>NOVEMBER</span>
+              <span>2026</span>
+            </div>
+          </div>
+          <div class="ceremony-actions">
+            <a
+              href="https://www.google.com/maps?cid=3167296554438272551"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-directions">
+              📍 GET DIRECTIONS
+            </a>
+          </div>
+        </div>
+
+        <div class="ceremony-divider"></div>
+
+        <!-- Event 3: Haldi -->
+        <div class="ceremony-entry">
+          <h4 class="ceremony-entry-title">Haldi Function</h4>
+          <div class="ceremony-entry-venue">at Hotel Palazzo Inn</div>
+          <div class="ceremony-entry-address">
+            13-14, Service Lane, A-2, Pankha Rd, Block A2, Janakpuri, New Delhi, Delhi, 110058
+          </div>
+          <div class="ceremony-entry-meta">
+            <span>AT 09:00</span>
+            <span>TUESDAY</span>
+          </div>
+          <div class="ceremony-date-display">
+            <span class="ceremony-day-num">24</span>
+            <div class="ceremony-month-stack">
+              <span>NOVEMBER</span>
+              <span>2026</span>
+            </div>
+          </div>
+          <div class="ceremony-actions">
+            <a
+              href="https://www.google.com/maps?cid=3167296554438272551"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-directions">
+              📍 GET DIRECTIONS
+            </a>
+          </div>
+        </div>
+
+        <div class="ceremony-divider"></div>
+
+        <!-- Event 4: Wedding Celebration -->
+        <div class="ceremony-entry">
+          <h4 class="ceremony-entry-title" style="color: #ffd700;">Wedding</h4>
+          <div class="ceremony-entry-venue">at Midori By Tivoli</div>
+          <div class="ceremony-entry-address">
+            D Block, Kapas Hera, New Delhi, Delhi 110097
+          </div>
+          <div class="ceremony-entry-meta">
+            <span>AT 19:00</span>
+            <span>WEDNESDAY</span>
+          </div>
+          <div class="ceremony-date-display">
+            <span class="ceremony-day-num" style="color: #ffd700;">25</span>
+            <div class="ceremony-month-stack">
+              <span>NOVEMBER</span>
+              <span>2026</span>
+            </div>
+          </div>
+          <div class="ceremony-actions">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Midori%20by%20Tivoli%20Kapashera&query_place_id=ChIJy4OkQPcbDTkRwhAwEqYrfN0"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-directions">
+              🚗 GET DIRECTIONS
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Wedding Main Reception, Countdown & Calendar Widget -->
+    <section class="burgundy-card card-with-flower">
+      <!-- Attached flower decoration matching ChungDoi -->
+      <img src="assets/images/flower2-decoration.webp" alt="Flower Bouquet" class="card-corner-flower">
+
+      <div class="card-inner-frame">
+        <h3 class="section-heading">Wedding</h3>
+        <div class="reception-header-tag">The celebration will take place at:</div>
+        
+        <div class="reception-time-row">
+          <span>19:00</span>
+          <span>WEDNESDAY</span>
+        </div>
+
+        <div class="reception-date-box">
+          <div class="reception-day-num">25</div>
+          <div class="reception-month-stack">
+            <span>NOVEMBER</span>
+            <span>2026</span>
+          </div>
+        </div>
+
+        <!-- Live Countdown Text (Exact ChungDoi format: "22 days 18 hours 43 min 30 sec") -->
+        <div id="live-countdown-text" class="live-countdown-banner">
+          Calculating countdown...
+        </div>
+
+        <!-- Calendar Widget -->
+        <div class="calendar-widget">
+          <div class="calendar-month-name">November 2026</div>
+          <div class="calendar-weekdays">
+            <span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span>
+          </div>
+          <div class="calendar-days-grid">
+            <div class="cal-day empty"></div>
+            <div class="cal-day empty"></div>
+            <div class="cal-day empty"></div>
+            <div class="cal-day empty"></div>
+            <div class="cal-day empty"></div>
+            <div class="cal-day empty"></div>
+            <div class="cal-day"><span>1</span></div>
+
+            <div class="cal-day"><span>2</span></div>
+            <div class="cal-day"><span>3</span></div>
+            <div class="cal-day"><span>4</span></div>
+            <div class="cal-day"><span>5</span></div>
+            <div class="cal-day"><span>6</span></div>
+            <div class="cal-day"><span>7</span></div>
+            <div class="cal-day"><span>8</span></div>
+
+            <div class="cal-day"><span>9</span></div>
+            <div class="cal-day"><span>10</span></div>
+            <div class="cal-day"><span>11</span></div>
+            <div class="cal-day"><span>12</span></div>
+            <div class="cal-day"><span>13</span></div>
+            <div class="cal-day"><span>14</span></div>
+            <div class="cal-day"><span>15</span></div>
+
+            <div class="cal-day"><span>16</span></div>
+            <div class="cal-day"><span>17</span></div>
+            <div class="cal-day"><span>18</span></div>
+            <div class="cal-day"><span>19</span></div>
+            <div class="cal-day"><span>20</span></div>
+            <div class="cal-day"><span>21</span></div>
+            <div class="cal-day"><span>22</span></div>
+
+            <div class="cal-day"><span>23</span></div>
+            <div class="cal-day"><span>24</span></div>
+            <div class="cal-day wedding-day"><span>25</span></div>
+            <div class="cal-day"><span>26</span></div>
+            <div class="cal-day"><span>27</span></div>
+            <div class="cal-day"><span>28</span></div>
+            <div class="cal-day"><span>29</span></div>
+
+            <div class="cal-day"><span>30</span></div>
+          </div>
+        </div>
+
+        <!-- Prominent RSVP Trigger Button -->
+        <button class="btn-confirm-attendance open-rsvp-btn" type="button">
+          CONFIRM ATTENDANCE
+        </button>
+      </div>
+    </section>
+
+    
+    <!-- 6. Wedding Venue & Map -->
+    <section class="burgundy-card" style="background: #fdfaf5; color: #3b1115; border: 1px solid rgba(81, 20, 25, 0.15);">
+      <div class="card-inner-frame">
+
+        <h3 class="venue-card-title">Wedding Venue</h3>
+        <p class="venue-card-subtitle">Midori by Tivoli, Kapashera</p>
+
+        <div class="map-embed-wrapper">
+          <iframe
+            title="Midori by Tivoli, Kapashera - Wedding Venue"
+            src="https://maps.google.com/maps?cid=15959679171763900610&output=embed"
+            width="100%"
+            height="400"
+            style="border:0; border-radius: 20px;"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=Midori%20by%20Tivoli%20Kapashera&query_place_id=ChIJy4OkQPcbDTkRwhAwEqYrfN0"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-directions">
+          🚗 GET DIRECTIONS
+        </a>
+
+      </div>
+    </section>
+
+
+    <!-- 7. Timeline / Program Schedule -->
+    <section class="burgundy-card">
+      <div class="card-inner-frame">
+        <h3 class="section-heading">Program Schedule</h3>
+        
+        <div class="timeline-items-list">
+          <!-- 19:00 Welcome of Baraat -->
+          <div class="timeline-event-row">
+            <div class="timeline-event-title">Welcome of Baraat</div>
+            <div class="timeline-icon-node">
+              <img src="assets/images/camera.webp" alt="Camera">
+            </div>
+            <div class="timeline-event-time">19:00</div>
+          </div>
+
+          <!-- 20:00 Varmala -->
+          <div class="timeline-event-row">
+            <div class="timeline-event-time">20:00</div>
+            <div class="timeline-icon-node">
+              <img src="assets/images/cake.webp" alt="Celebration">
+            </div>
+            <div class="timeline-event-title">Varmala</div>
+          </div>
+
+          <!-- 21:00 Dinner -->
+          <div class="timeline-event-row">
+            <div class="timeline-event-title">Dinner</div>
+            <div class="timeline-icon-node">
+              <img src="assets/images/cook.webp" alt="Dinner">
+            </div>
+            <div class="timeline-event-time">21:00</div>
+          </div>
+
+          <!-- 00:00 Phere -->
+          <div class="timeline-event-row">
+            <div class="timeline-event-time">00:00</div>
+            <div class="timeline-icon-node">
+              <img src="assets/images/camera.webp" alt="Phere">
+            </div>
+            <div class="timeline-event-title">Phere</div>
+          </div>
+
+          <!-- 04:00 Vidai -->
+          <div class="timeline-event-row">
+            <div class="timeline-event-title">Vidai</div>
+            <div class="timeline-icon-node">
+              <img src="assets/images/cake.webp" alt="Vidai">
+            </div>
+            <div class="timeline-event-time">04:00</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Casper's Paw-some Note -->
+    <section class="casper-card">
+      <div class="casper-header">🐾 Woof Woof! It’s Casper here! 🐶🤝</div>
+      <div class="casper-body">My hoomans are getting married, and I’m inviting you all to join the wedding procession (Baraat) and make their big day extra paw-some! 🐾💍
+
+Come shower them with love, blessings, and lots of tail-wagging happiness! 🐕✨
+
+With furry paws &amp; lots of woofs,
+Your furry little wedding host, Casper 🐾❤️</div>
+      <div class="casper-signature">Casper</div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="invitation-footer">
+      <span class="footer-couple">Anjali &amp; Robin</span>
+      <div>Thank you for being part of our special journey! ❤️</div>
+    </footer>
+  </main>
+
+  <!-- ==========================================================================
+       RSVP MODAL DIALOG
+       ========================================================================== -->
+  <div id="rsvp-modal" class="rsvp-modal">
+    <div class="rsvp-modal-card">
+      <button id="close-rsvp-btn" class="rsvp-modal-close" type="button">&times;</button>
+
+      <!-- Form View -->
+      <form id="rsvp-form">
+        <h3 class="rsvp-modal-title">RSVP</h3>
+        <p class="rsvp-modal-desc">Please let us know if you can attend our wedding!</p>
+
+        <div class="rsvp-form-group">
+          <label class="rsvp-form-label" for="rsvp-name">Your Full Name</label>
+          <input type="text" id="rsvp-name" class="form-input" placeholder="e.g. Rahul Sharma" required>
+        </div>
+
+        <div class="rsvp-form-group">
+          <label class="rsvp-form-label">Will you be attending?</label>
+          <div class="rsvp-radio-group">
+            <label class="rsvp-radio-label">
+              <input type="radio" name="attending" value="yes" checked>
+              <span>Joyfully Accept</span>
+            </label>
+            <label class="rsvp-radio-label">
+              <input type="radio" name="attending" value="no">
+              <span>Regretfully Decline</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="rsvp-form-group">
+          <label class="rsvp-form-label" for="rsvp-count">Number of Guests</label>
+          <select id="rsvp-count" class="form-input">
+            <option value="1">1 Person</option>
+            <option value="2" selected>2 Persons</option>
+            <option value="3">3 Persons</option>
+            <option value="4">4+ Persons (Family)</option>
+          </select>
+        </div>
+
+        <div class="rsvp-form-group">
+          <label class="rsvp-form-label">Attending Events</label>
+          <div class="rsvp-checkbox-group">
+            <label class="rsvp-check-label">
+              <input type="checkbox" checked> Engagement Ceremony (Nov 22)
+            </label>
+            <label class="rsvp-check-label">
+              <input type="checkbox" checked> Mehndi Function (Nov 23)
+            </label>
+            <label class="rsvp-check-label">
+              <input type="checkbox" checked> Haldi Function (Nov 24)
+            </label>
+            <label class="rsvp-check-label">
+              <input type="checkbox" checked> Wedding Celebration (Nov 25)
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-rsvp-submit">Send RSVP</button>
+      </form>
+
+      <!-- Thank You Confirmation Screen -->
+      <div id="rsvp-thank-you" class="rsvp-thank-you-view">
+        <div class="rsvp-thank-you-title">Thank You!</div>
+        <div class="rsvp-thank-you-text">Thank you for your love, blessings, and for confirming your presence! ❤️
+
+Anjali &amp; Robin are truly delighted to celebrate these special moments with you. Your presence will make our celebrations even more memorable. Looking forward to celebrating together! 🥂✨</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FLOATING MUSIC CONTROLLER
+       ========================================================================== */ -->
+  <button id="music-toggle-btn" class="floating-music-btn paused" type="button" title="Toggle Wedding Music">
+    <div class="equalizer-bars">
+      <span class="eq-bar"></span>
+      <span class="eq-bar"></span>
+      <span class="eq-bar"></span>
+      <span class="eq-bar"></span>
+    </div>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

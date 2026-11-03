@@ -1,0 +1,464 @@
+{
+  "id": "ca0a8daf-62c2-4a11-aa40-cba15f7b6c0e",
+  "title": "Invitation 1",
+  "data": {
+    "date": "2026-11-25",
+    "time": "19:00",
+    "address": {
+      "en": "Midori by Tivoli kapashera"
+    },
+    "bankBin": "",
+    "giftBox": {
+      "en": "Special Message"
+    },
+    "showMap": true,
+    "bankCode": "",
+    "bankLogo": "",
+    "bankName": "",
+    "showBank": true,
+    "showRsvp": true,
+    "timezone": "Asia/Calcutta",
+    "heroPhoto": "https://cdn.chungdoi.com/uploads/c5f969a7-71bd-4db0-8db4-16da182b58a2.jpg",
+    "partyType": "celebration",
+    "showParty": true,
+    "brideFirst": true,
+    "ceremonies": [
+      {
+        "id": "ea6748e8",
+        "date": "2026-11-22",
+        "time": "11:00",
+        "header": {
+          "en": "Engagement Ceremony \nat The Opulence Hotel & Banquets\n\nD4, Peera Garhi, Udyog Nagar, Mangolpuri, Delhi, 110041",
+          "vi": "Lá» THÃNH HÃN ÄÆ¯á»¢C Cá»¬ HÃNH Táº I\nTÆ¯ GIA"
+        }
+      },
+      {
+        "id": "23561d65",
+        "date": "2026-11-23",
+        "time": "18:00",
+        "header": {
+          "en": "__________________________________________________________________________\nMehndi Function\nat Hotel Palazzo Inn\n\n13-14, Service Lane, A-2, Pankha Rd, Block A2, \nJanakpuri, New Delhi, Delhi, 110058",
+          "vi": "Lá» THÃNH HÃN ÄÆ¯á»¢C Cá»¬ HÃNH Táº I\nTÆ¯ GIA"
+        }
+      },
+      {
+        "id": "abf01d3e",
+        "date": "2026-11-24",
+        "time": "09:00",
+        "header": {
+          "en": "__________________________________________________________________________\nHaldi Function \nat Hotel Palazzo Inn\n\n13-14, Service Lane, A-2, Pankha Rd, Block A2, \nJanakpuri, New Delhi, Delhi, 110058",
+          "vi": "Lá» THÃNH HÃN ÄÆ¯á»¢C Cá»¬ HÃNH Táº I\nTÆ¯ GIA"
+        }
+      },
+      {
+        "id": "fa688076",
+        "date": "2026-11-25",
+        "time": "19:00",
+        "header": {
+          "en": "__________________________________________________________________________\nWedding \nat Midori By Tivoli \n\nD Block, Kapas Hera, New Delhi, Delhi 110097",
+          "vi": "Lá» THÃNH HÃN ÄÆ¯á»¢C Cá»¬ HÃNH Táº I\nTÆ¯ GIA"
+        }
+      }
+    ],
+    "templateId": "minimalism_darkred",
+    "timeFormat": "24h",
+    "accountName": "",
+    "brideFather": {
+      "en": "Lt. JWO Ashok Kumar"
+    },
+    "brideMother": {
+      "en": "Shila "
+    },
+    "giftMethods": [
+      {
+        "id": "gm_mvwmvinw_n0chl6",
+        "for": "custom",
+        "type": "note",
+        "message": {
+          "en": "My hoomans are getting married, and Iâm inviting you all to join the wedding procession (Baraat) and make their big day extra paw-some! ð¾ð\n\nCome shower them with love, blessings, and lots of tail-wagging happiness! ðâ¨\n\nWith furry paws & lots of woofs,\nYour furry little wedding host, Casper ð¾â¤ï¸"
+        },
+        "customLabel": {
+          "en": "ð¾ Woof Woof! Itâs Casper here! ð¶ð¤"
+        }
+      }
+    ],
+    "groomFather": {
+      "en": "Adv. Rajesh Kumar"
+    },
+    "groomMother": {
+      "en": "Anita Kumari"
+    },
+    "ogImageMode": "envelope",
+    "showGallery": false,
+    "brideAddress": {
+      "en": "Gali 14 - Sadh Nagar Palam Colony, New Delhi 110045"
+    },
+    "brideBankBin": "",
+    "eventHeading": "SAVE THE DATE\n~25.11.2026~",
+    "groomAddress": {
+      "en": "Gali 1 - Sadh Nagar, Palam Colony, New Delhi 110045"
+    },
+    "groomBankBin": "",
+    "musicEndTime": null,
+    "musicTrackId": "yt-fe06fc95-500",
+    "showQRInline": false,
+    "showSponsors": false,
+    "showThankYou": true,
+    "showTimeline": true,
+    "thankYouNote": {
+      "en": "Thank you for your love, blessings, and for confirming your presence! â¤ï¸\n\nAnjali & Robin are truly delighted to celebrate these special moments with you. Your presence will make our celebrations even more memorable. Looking forward to celebrating together! ðâ¨"
+    },
+    "weddingTitle": "Happy Wedding",
+    "accountNumber": "",
+    "activeLocales": [
+      "en"
+    ],
+    "brideBankCode": "",
+    "brideBankLogo": "",
+    "brideBankName": "",
+    "brideFullName": "Anjali",
+    "galleryImages": [
+      {
+        "url": "https://cdn.chungdoi.com/uploads/588041e5-9c88-4655-b5be-592739e9dc91.jpg",
+        "position": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      {
+        "url": "https://cdn.chungdoi.com/uploads/0a563522-35df-41a8-bc88-e769930a6554.jpg",
+        "position": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      {
+        "url": "https://cdn.chungdoi.com/uploads/4f8bb350-8987-4803-9560-214d9d9c1e5a.jpg",
+        "position": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      {
+        "url": "https://cdn.chungdoi.com/uploads/2f94f414-4063-47fd-b015-b3f34123633c.jpg",
+        "position": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      {
+        "url": "https://cdn.chungdoi.com/uploads/fdf07ceb-ab35-4774-99dc-2cb2db16c404.jpg",
+        "position": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      {
+        "url": "https://cdn.chungdoi.com/uploads/491750e1-58cd-49f6-8c4b-887ea1b6d31c.jpg",
+        "position": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      {
+        "url": "https://cdn.chungdoi.com/uploads/ea310236-6447-40e5-88dc-1b2394bb4e04.jpg",
+        "position": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      {
+        "url": "https://cdn.chungdoi.com/uploads/93d709f3-a379-4679-bdd1-cef2aa478301.jpg",
+        "position": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      {
+        "url": "https://cdn.chungdoi.com/uploads/fd9139d5-14af-4b6e-8069-f8825a3c59fc.jpg",
+        "position": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      {
+        "url": "https://cdn.chungdoi.com/uploads/7da33377-6bdb-4c47-97bc-935ce5042fc7.jpg",
+        "position": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      {
+        "url": "https://cdn.chungdoi.com/uploads/08e28aa0-769c-40c8-a920-e0fa19ac5c57.jpg",
+        "position": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      {
+        "url": "https://cdn.chungdoi.com/uploads/83ef5101-8b46-472e-b589-c460b342b804.jpg",
+        "position": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      {
+        "url": "https://cdn.chungdoi.com/uploads/200d6a50-7680-4faa-8e99-88879cb2bb00.jpg",
+        "position": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      {
+        "url": "https://cdn.chungdoi.com/uploads/b7a4079e-4fd7-43c2-9c14-6541eee150de.jpg",
+        "position": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      {
+        "url": "https://cdn.chungdoi.com/uploads/df8ecedb-9c44-4680-8440-1d3dfdd83f13.jpg",
+        "position": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      {
+        "url": "https://cdn.chungdoi.com/uploads/68bf8dcc-4fd8-4da7-a5a0-daa9a4ab8ac6.jpg",
+        "position": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      {
+        "url": "https://cdn.chungdoi.com/uploads/747d8d6a-338d-4613-9c74-1a9756de35ab.jpg",
+        "position": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      {
+        "url": "https://cdn.chungdoi.com/uploads/c7984761-ed1b-4059-b181-83377678fe21.jpg",
+        "position": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      {
+        "url": "https://cdn.chungdoi.com/uploads/8921b24c-b9d3-47b7-92e0-5ea717b3ac74.jpg",
+        "position": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      {
+        "url": "https://cdn.chungdoi.com/uploads/5a94c593-0ca3-4003-ac70-abffdc8a0d3a.jpg",
+        "position": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      {
+        "url": "https://cdn.chungdoi.com/uploads/aa74579e-9a01-42d7-bae3-c450cc54127b.jpg",
+        "position": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      {
+        "url": "https://cdn.chungdoi.com/uploads/bd8a2432-c4d5-408c-822a-66bda3f14307.jpg",
+        "position": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      {
+        "url": "https://cdn.chungdoi.com/uploads/65b4dc9e-916b-4a28-b46c-7998ed2b3dd5.jpg",
+        "position": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      {
+        "url": "https://cdn.chungdoi.com/uploads/5d0179ea-4b8c-4282-9645-2443b388f16d.jpg",
+        "position": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      }
+    ],
+    "galleryLayout": "cards",
+    "groomBankCode": "",
+    "groomBankLogo": "",
+    "groomBankName": "",
+    "groomFullName": "Robin ",
+    "rsvpQuestions": [],
+    "showDresscode": false,
+    "showGuestbook": true,
+    "brideShortName": "",
+    "groomShortName": "",
+    "musicStartTime": null,
+    "showFamilyInfo": true,
+    "timelineEvents": [
+      {
+        "id": "ec600834",
+        "time": "19:00",
+        "label": {
+          "ar": "Ø§Ø³ØªÙØ¨Ø§Ù Ø§ÙØ¶ÙÙÙ",
+          "de": "Empfang",
+          "en": "Welcome of Baraat",
+          "es": "Bienvenida",
+          "fr": "Accueil des invitÃ©s",
+          "hi": "à¤à¤¤à¤¿à¤¥à¤¿ à¤à¤à¤®à¤¨",
+          "id": "Penyambutan Tamu",
+          "it": "Accoglienza degli ospiti",
+          "ja": "åä»",
+          "ko": "íê° ë§ì´",
+          "ms": "Ketibaan Tetamu",
+          "pt": "Boas-vindas",
+          "ru": "ÐÑÑÑÐµÑÐ° Ð³Ð¾ÑÑÐµÐ¹",
+          "th": "à¸à¹à¸­à¸à¸£à¸±à¸à¹à¸à¸",
+          "tr": "Misafir KarÅÄ±lama",
+          "uz": "Mehmonlarni kutib olish",
+          "vi": "ÄÃ³n khÃ¡ch",
+          "fil": "Pagdating ng mga Bisita",
+          "zh-CN": "å®¾å®¢è¿æ¥",
+          "zh-HK": "è³å®¢è¿æ¥",
+          "zh-TW": "è³å®¢è¿æ¥"
+        }
+      },
+      {
+        "id": "018afa00",
+        "time": "20:00",
+        "label": {
+          "ar": "Ø§ÙØ§Ø³ØªÙØ¨Ø§Ù",
+          "de": "Feier",
+          "en": "Varmala",
+          "es": "RecepciÃ³n",
+          "fr": "RÃ©ception",
+          "hi": "à¤ªà¥à¤°à¥à¤¤à¤¿à¤­à¥à¤",
+          "id": "Resepsi",
+          "it": "Ricevimento",
+          "ja": "æ«é²å®´",
+          "ko": "í¼ë¡ì°",
+          "ms": "Majlis Resepsi",
+          "pt": "RecepÃ§Ã£o",
+          "ru": "ÐÐ°Ð½ÐºÐµÑ",
+          "th": "à¹à¸£à¸´à¹à¸¡à¸à¸²à¸à¹à¸¥à¸µà¹à¸¢à¸",
+          "tr": "Kutlama",
+          "uz": "ToÊ»y marosimi",
+          "vi": "Khai tiá»c",
+          "fil": "Reception",
+          "zh-CN": "å¼å¸­",
+          "zh-HK": "éå¸­",
+          "zh-TW": "éå¸­"
+        }
+      },
+      {
+        "id": "3445512e",
+        "time": "21:00",
+        "label": {
+          "ar": "ÙØ®Ø¨ ÙÙØ·Ø¹ Ø§ÙÙØ¹ÙØ©",
+          "de": "AnstoÃen und Anschnitt",
+          "en": "Dinner",
+          "es": "Brindis y pastel",
+          "fr": "Toasts et gÃ¢teau",
+          "hi": "à¤à¥à¤ à¤à¤à¤¿à¤à¤ à¤à¤° à¤à¥à¤¸à¥à¤",
+          "id": "Bersulang dan potong kue",
+          "it": "Brindisi e taglio della torta",
+          "ja": "ä¹¾æ¯ã¨ã±ã¼ã­ã«ãã",
+          "ko": "ê±´ë°° ë° ì¼ì´í¬ ì»·í",
+          "ms": "Ucap selamat dan potong kek",
+          "ru": "Ð¢Ð¾ÑÑÑ Ð¸ ÑÐ¾ÑÑ",
+          "th": "à¸¢à¸à¹à¸à¹à¸§à¸­à¸§à¸¢à¸à¸£à¹à¸¥à¸°à¸à¸±à¸à¹à¸à¹à¸",
+          "tr": "Kadeh KaldÄ±rma ve Pasta Kesimi",
+          "uz": "Qadah koÊ»tarish va tort kesish",
+          "vi": "RÃ³t rÆ°á»£u, cáº¯t bÃ¡nh",
+          "fil": "Toast at paghihiwa ng cake",
+          "zh-CN": "æ¬éãåèç³",
+          "zh-TW": "æ¬éãåèç³"
+        }
+      },
+      {
+        "id": "3a11cb04",
+        "time": "00:00",
+        "label": {
+          "ar": "Ø§ÙØ·Ø¨Ù Ø§ÙØ±Ø¦ÙØ³Ù",
+          "de": "Hauptgang",
+          "en": "Phere",
+          "es": "Plato principal",
+          "fr": "Plat principal",
+          "hi": "à¤ªà¥à¤°à¥à¤¤à¤¿à¤­à¥à¤",
+          "id": "Sajian utama",
+          "it": "Portata principale",
+          "ja": "ã¡ã¤ã³æç",
+          "ko": "ë©ì¸ ìë¦¬",
+          "ms": "Hidangan utama",
+          "ru": "ÐÑÐ½Ð¾Ð²Ð½Ð¾Ðµ Ð±Ð»ÑÐ´Ð¾",
+          "th": "à¹à¸ªà¸´à¸£à¹à¸à¸­à¸²à¸«à¸²à¸£à¸à¸²à¸à¸«à¸¥à¸±à¸",
+          "tr": "Ana Yemek",
+          "uz": "Asosiy taom",
+          "vi": "Phá»¥c vá»¥ mÃ³n chÃ­nh",
+          "fil": "Hapunan",
+          "zh-CN": "ä¸ä¸»è",
+          "zh-TW": "ä¸ä¸»è"
+        }
+      },
+      {
+        "id": "57d90b82",
+        "time": "04:00",
+        "label": {
+          "ar": "Ø®ØªØ§Ù Ø§ÙØ­ÙÙ",
+          "de": "Verabschiedung",
+          "en": "Vidai",
+          "es": "Despedida",
+          "fr": "Fin de la rÃ©ception",
+          "hi": "à¤µà¤¿à¤¦à¤¾à¤",
+          "id": "Penutupan acara",
+          "it": "Saluti finali",
+          "ja": "ãéã",
+          "ko": "íì¡",
+          "ms": "Majlis bersurai",
+          "ru": "ÐÐ°Ð²ÐµÑÑÐµÐ½Ð¸Ðµ",
+          "th": "à¸à¸´à¸à¸à¸²à¸à¹à¸¥à¸µà¹à¸¢à¸",
+          "tr": "KapanÄ±Å",
+          "uz": "Yakunlash",
+          "vi": "Káº¿t thÃºc tiá»c",
+          "fil": "Pagtatapos ng programa",
+          "zh-CN": "å®´ä¼ç»æ",
+          "zh-TW": "å®´æçµæ"
+        }
+      }
+    ],
+    "brideLinePayUrl": "",
+    "giftDisplayMode": "gift_box",
+    "groomLinePayUrl": "",
+    "partyVenueTitle": {
+      "en": "Wedding Venue"
+    },
+    "rsvpDisplayMode": "button",
+    "brideAccountName": "",
+    "groomAccountName": "",
+    "ceremonyInfoTitle": {
+      "en": "Engagement Ceremony, Mehndi & Haldi, Wedding & Family Dinner"
+    },
+    "brideAccountNumber": "",
+    "groomAccountNumber": "",
+    "receptionInfoTitle": {
+      "en": "Wedding"
+    },
+    "showReceptionTimes": false,
+    "customAnnouncementText": {
+      "en": "WE JOYFULLY ANNOUNCE\nTHE WEDDING CELEBRATIONS OF OUR CHILDREN"
+    }
+  },
+  "slug": "robin-anjali",
+  "unique_visitors": 8,
+  "is_paid": false,
+  "is_demo": false,
+  "published_at": "2026-10-31T16:52:04.784Z",
+  "created_at": "2026-10-24T08:25:21.167Z",
+  "updated_at": "2026-11-02T18:33:11.208Z",
+  "og_fields_updated_at": "2026-11-02T17:54:14.934Z",
+  "branding": null
+}
