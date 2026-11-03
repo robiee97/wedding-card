@@ -164,23 +164,54 @@ END:VCALENDAR`;
   }
 
   if (rsvpForm) {
-    rsvpForm.addEventListener('submit', (e) => {
+    rsvpForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const guestName = document.getElementById('rsvp-name').value.trim();
       const attendance = document.querySelector('input[name="attending"]:checked')?.value || 'yes';
       const guestsCount = document.getElementById('rsvp-count').value;
+      const submitBtn = rsvpForm.querySelector('button[type="submit"]');
 
-      // Store in localStorage
-      const rsvps = JSON.parse(localStorage.getItem('robin_anjali_rsvps') || '[]');
-      rsvps.push({
+      if (!guestName) return;
+
+      const rsvpData = {
         name: guestName,
-        attendance: attendance,
-        guests: guestsCount,
-        date: new Date().toISOString()
-      });
-      localStorage.setItem('robin_anjali_rsvps', JSON.stringify(rsvps));
+        attending: attendance === 'yes' ? 'Attending' : 'Not Attending',
+        guests: parseInt(guestsCount, 10) || 1,
+        timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
+      };
 
-      // Transition to thank you message
+      // Always save locally as backup
+      try {
+        const rsvps = JSON.parse(localStorage.getItem('robin_anjali_rsvps') || '[]');
+        rsvps.push(rsvpData);
+        localStorage.setItem('robin_anjali_rsvps', JSON.stringify(rsvps));
+      } catch (err) {
+        console.warn('Could not save to localStorage:', err);
+      }
+
+      // Show submitting state on button
+      const originalBtnText = submitBtn ? submitBtn.innerText : 'Submit';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerText = 'Submitting...';
+      }
+
+      // Send to Cloudflare Pages API -> Google Sheet
+      try {
+        await fetch('/api/rsvp', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(rsvpData)
+        });
+      } catch (networkErr) {
+        console.warn('Network submission error (will rely on backup):', networkErr);
+      }
+
+      // Reset button & transition to thank you confirmation
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerText = originalBtnText;
+      }
       rsvpForm.style.display = 'none';
       if (rsvpThankYou) rsvpThankYou.classList.add('active');
     });
